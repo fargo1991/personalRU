@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8467F7D-A5D4-4FD9-9D79-E36BD3840F03}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PersonalRU</RootNamespace>
+    <AssemblyName>PersonalRU</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SRL">
+      <HintPath>.\SRL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddButton.cs" />
+    <Compile Include="AskCreateExistingNameProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskCreateExistingNameProject.Designer.cs">
+      <DependentUpon>AskCreateExistingNameProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AskDeleteVacancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskDeleteVacancyForm.Designer.cs">
+      <DependentUpon>AskDeleteVacancyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AskExitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskExitForm.Designer.cs">
+      <DependentUpon>AskExitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskForm.Designer.cs">
+      <DependentUpon>AskForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateVacancyMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateVacancyMenu.Designer.cs">
+      <DependentUpon>CreateVacancyMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteUnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteUnitForm.Designer.cs">
+      <DependentUpon>DeleteUnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepartmentNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepartmentNameForm.Designer.cs">
+      <DependentUpon>DepartmentNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Item.cs" />
+    <Compile Include="NewPostForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewPostForm.Designer.cs">
+      <DependentUpon>NewPostForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReqBlockList.cs" />
+    <Compile Include="RequirBlock.cs" />
+    <Compile Include="UnitFile.cs" />
+    <Compile Include="UnitFileList.cs" />
+    <Compile Include="InitMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InitMenu.Designer.cs">
+      <DependentUpon>InitMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewProjectForm.Designer.cs">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PhotoDesignForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhotoDesignForm.Designer.cs">
+      <DependentUpon>PhotoDesignForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IO_methods.cs" />
+    <Compile Include="ItemsList.cs" />
+    <Compile Include="PhotoTrimmer.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="UnitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnitForm.Designer.cs">
+      <DependentUpon>UnitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnitList.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProfileData.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vacancy.cs" />
+    <Compile Include="VacancyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VacancyForm.Designer.cs">
+      <DependentUpon>VacancyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VacancyList.cs" />
+    <Compile Include="VSBitmap.cs" />
+    <EmbeddedResource Include="AskCreateExistingNameProject.resx">
+      <DependentUpon>AskCreateExistingNameProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AskDeleteVacancyForm.resx">
+      <DependentUpon>AskDeleteVacancyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AskExitForm.resx">
+      <DependentUpon>AskExitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AskForm.resx">
+      <DependentUpon>AskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateVacancyMenu.resx">
+      <DependentUpon>CreateVacancyMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteUnitForm.resx">
+      <DependentUpon>DeleteUnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepartmentNameForm.resx">
+      <DependentUpon>DepartmentNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InitMenu.resx">
+      <DependentUpon>InitMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPostForm.resx">
+      <DependentUpon>NewPostForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewProjectForm.resx">
+      <DependentUpon>NewProjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PhotoDesignForm.resx">
+      <DependentUpon>PhotoDesignForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitForm.resx">
+      <DependentUpon>UnitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="VacancyForm.resx">
+      <DependentUpon>VacancyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cut_down_def.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\exit_btn_def.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\cut_down_cover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\exit_btn_cover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\ПерсоналRU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\delete.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="img\addButt.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\addButt_isch.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_file_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_new_post.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_Unit_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_vacancy_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\Alert.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\ask_sign.png" />
+    <Content Include="img\changePhotoBar.png" />
+    <Content Include="img\def__file_img.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\deleteItem.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\delete_file_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\doc_img.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\edit_unit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\edit_vacancy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\new_project_icon.png" />
+    <Content Include="img\new_vacancy_unit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\no_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\no_icon_transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\ok_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\ok_icon_transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\openProjectIcon.png" />
+    <Content Include="img\open_file_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\xls_img.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="img\No_photo.png" />
+    <None Include="img\add_vacancy_def.png" />
+    <Content Include="img\add-item-hover_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add-item_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_unit_def.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_unit_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\add_vacancy_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\delete_item.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\delete_item_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\exchange_unit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="img\ImageNone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
